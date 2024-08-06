@@ -189,7 +189,7 @@ getUserById(users, '16t', (user) => {
 // Make sure to use an arrow function.
 // You should not use a for loop, but should use the filter method instead.
 
-// REPLACE THIS WITH YOUR CODE
+const evens = (array) => array.filter((num) => num % 2 === 0)
 
 /// /////// PROBLEM 8 //////////
 
@@ -201,7 +201,9 @@ getUserById(users, '16t', (user) => {
 //
 // Make sure to use an arrow function combined with the filter method (not a for loop).
 
-// REPLACE THIS WITH YOUR CODE
+const startWithLetterA = (array) => {
+  return array.filter((str) => str[0].toUpperCase() === "A")
+}
 
 /// /////// PROBLEM 9 //////////
 
@@ -211,7 +213,9 @@ getUserById(users, '16t', (user) => {
 //
 // Make sure to use arrow functions combined with the map method.
 
-// REPLACE THIS WITH YOUR CODE
+const formalGreeting = (arrNames) => {
+  return arrNames.map((name) => `Hello, ${name}`)
+}
 
 /// /////// PROBLEM 10 //////////
 
@@ -221,7 +225,9 @@ getUserById(users, '16t', (user) => {
 // Remember that by default, JavaScript sorts by converting all items to strings. So you
 // will need to provide a compare function.
 
-// REPLACE THIS WITH YOUR CODE
+const sortNumbers = (arrNum) => {
+  return arrNum.sort((a, b) => a - b)
+}
 
 /// /////// PROBLEM 11 //////////
 
