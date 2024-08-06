@@ -111,7 +111,11 @@ contains(names, 'Colt', (result) => {
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-//Code Here
+const each = (arrNames, cb) => {
+  arrNames.forEach((name, index) => {
+    cb(name, index)
+  })
+}
 
 // Do not edit the code below.
 // Your function is called here
@@ -128,7 +132,14 @@ each(names, (item, index) => {
   When the correct user object is found, invoke the callback with the user object as an argument.
 */
 
-// Code here
+const getUserById = (users, id, cb) => {
+  users.forEach((userObj) => {
+    if (userObj.id = id) {
+      cb(userObj)
+    }
+  })  
+    
+}
 
 // Do not edit the code below.
 const users = [
