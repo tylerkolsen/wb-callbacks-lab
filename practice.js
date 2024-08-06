@@ -28,7 +28,7 @@
   Return the result of invoking the callback.
 */
 
-// Code Here
+const first = (array, cb) => cb(array[0])
 
 // Do not edit the code below.
 const names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -48,7 +48,7 @@ first(names, function (firstName) {
   Return the result of invoking the callback.
 */
 
-//Code Here
+const last = (array, cb) => cb(array[array.length-1])
 
 // Do not edit the code below.
 // Your function is called here
@@ -65,7 +65,7 @@ last(names, (lastName) => {
   Invoke the callback, passing in the product of the two numbers multiplied as the argument.
 */
 
-//Code Here
+const multiply = (num1, num2, cb) => cb(num1 * num2)
 
 // Do not edit the code below.
 // Your function is called here
@@ -83,8 +83,16 @@ multiply(4, 3, function (answer) {
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-//Code Here
-
+const contains = (array, name, cb) => {
+  let finalOutput = false
+  array.forEach((arrName) => {
+    if (arrName === name) {
+      return finalOutput = true
+    }
+    
+  })
+  return cb(finalOutput)
+}
 // Do not edit the code below.
 // Your function is called here
 contains(names, 'Colt', (result) => {
